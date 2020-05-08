@@ -1,11 +1,13 @@
 import pandas
-def main():
-    df = pandas.read_csv('example.csv')
-    for index, row in df.iterrows():
+def looping_with_iterrows(file_data):
+    for index, row in file_data.iterrows():
         print("index {}".format(index))
         print("-------------")
         print("row: {}".format(row))
 
+def main():
+    df = pandas.read_csv('example.csv')
+    looping_with_iterrows(df)
 
 if __name__ == "__main__":
     main()
