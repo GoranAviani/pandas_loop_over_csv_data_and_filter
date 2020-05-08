@@ -1,6 +1,8 @@
 import pandas
 def main():
-    pass
+    df = pandas.read_csv('example.csv')
+    for index, row in df.iterrows():
+        print("index {}, row: {}" .format(index, row))
 
 
 if __name__ == "__main__":
