@@ -5,6 +5,9 @@ def looping_with_iterrows(file_data):
         print("-------------")
         #print("row: {}".format(row))
         print(row["field2"])
+        print(row["field3"])
+
+
 def looping_with_itertuples(file_data):
     for row in file_data.itertuples():
         print("-------------")
