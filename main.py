@@ -11,7 +11,7 @@ def looping_with_itertuples(file_data):
         print("row: {}".format(row))
 
 def main():
-    df = pandas.read_csv('example_2.csv')
+    df = pandas.read_csv('example_2.csv', header=0)
     looping_with_iterrows(df)
 
 if __name__ == "__main__":
