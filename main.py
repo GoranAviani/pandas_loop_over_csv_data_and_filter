@@ -6,11 +6,12 @@ def reading_file_with_sep(file_name):
      field of your data is not a comma, use the sep argument
     :return: 
     """
-    df = pandas.read_csv(file_name, header=0, sep=",")
+    df = pandas.read_csv(file_name, header=0, sep=",", na_values=['.'])
     return df
 
 def looping_with_iterrows(file_data):
     for index, row in file_data.iterrows():
+        print(row)
         print("-------------")
         if row["Header 2"] == "row2field2" and row["Header 3"] == "row2field3":
             print(row["Header 1"])
