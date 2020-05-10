@@ -12,7 +12,9 @@ def reading_file_with_sep(file_name):
 def looping_with_iterrows(file_data):
     for index, row in file_data.iterrows():
         print("-------------")
-        print(row["Header 2"])
+        if row["Header 2"] == "row2field2" and row["Header 3"] == "row2field3":
+            print(row["Header 1"])
+            print(row)
 
 
 def looping_with_itertuples(file_data):
